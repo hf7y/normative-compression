@@ -1,0 +1,19 @@
+# Data
+corpus/raw/
+corpus/private/
+*.jsonl
+*.parquet
+*.sqlite
+
+# Python
+__pycache__/
+.venv/
+*.pyc
+
+# Analysis outputs
+analysis/figures/generated/
+analysis/results/generated/
+
+# Secrets
+.env
+.env.*
