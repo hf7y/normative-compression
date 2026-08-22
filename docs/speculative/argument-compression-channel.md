@@ -2,63 +2,67 @@
 
 **Status:** speculative research note; not part of the established method.
 
-## Idea
+## General idea
 
-A possible formalization of normative compression treats a published argument as a lossy representation of a more fully explicated argument.
+Treat conceptual/rhetorical expression as an information transformation rather than assuming that it specifically compresses normative material.
+
+A useful starting model is:
 
 \[
-A^* \xrightarrow{f_\theta} Y \xrightarrow{g_\phi} \hat A
+X \xrightarrow{f} Y
 \]
 
-where:
+where \(X\) is an argument or other information-bearing representation and \(Y\) is its linguistic realization. Candidate quantities include information preserved \(I(X;Y)\), residual uncertainty \(H(X\mid Y)\), and representation/graph differences.
 
-- \(A^*\) = a fully reconstructed argument, including enthymematic premises and normative bridges;
-- \(f_\theta\) = the linguistic/conceptual operation by which an argument is rendered in published discourse;
-- \(Y\) = the published text;
-- \(g_\phi\) = reconstruction by a reader/annotator;
-- \(\hat A\) = the reconstructed argument.
+"Normative compression" can then be treated as a possible specialization: after the transformation is measured neutrally, ask whether normative, descriptive, empirical, inferential, or other components are disproportionately transformed.
 
-The possible empirical object is therefore not "shortness" but the difference between the inferential structure of \(A^*\) and the structure explicitly represented in \(Y\).
+## Corpus idea: naturally paired representations
 
-## Possible measurements
+Rather than beginning by reconstructing hidden premises, seek episodes in which the same political actor produces both:
 
-Candidate measures include:
+\[
+W \leftrightarrow S
+\]
 
-- proportion of reconstructed premises absent from the published text;
-- proportion of normative vs. descriptive inferential structure omitted;
-- graph/edge deletion between \(A^*\) and \(Y\);
-- conditional uncertainty \(H(A^* \mid Y)\);
-- information shared between classifications and normative conclusions, \(I(C;N)\).
+- \(W\) = an official written public position;
+- \(S\) = that actor's spoken intervention on the same proposal/issue.
 
-A candidate "normative compression" measure might compare the information or inferential structure of normative components in \(A^*\) and \(Y\).
+This is preferable to assuming speech is a decompression of writing: \(S\) may omit material from \(W\) **and add material absent from \(W\)**. The latter permits investigation of phenomena such as "saying the quiet part out loud" without presupposing that they occur.
 
-These are **candidate operationalizations, not validated measures**.
+For each pair, independently annotate argument structure:
 
-## Annotation possibility
+\[
+G_W,\;G_S
+\]
 
-Annotators could reconstruct the published argument by identifying:
+using an established high-IAA scheme such as Stab & Gurevych. Then examine preserved, omitted, and speech-added argumentative structure:
 
-1. explicit propositions;
-2. implicit/enthymematic premises;
-3. normative principles;
-4. inferential relations;
-5. alternative plausible reconstructions.
+\[
+G_W\cap G_S,\quad G_W-G_S,\quad G_S-G_W.
+\]
 
-Annotator disagreement should be retained rather than necessarily adjudicated into a single "true" argument.
+Only later should missing structure be interpreted as enthymematic, normative, conceptual, etc.
 
-## Signal-processing analogy
+## Methodological sequence
 
-The analogy suggests treating conceptual/rhetorical expression as an encoding operation and interpretation as decoding. The useful question is whether different kinds of argumentative information are systematically filtered or compressed.
+1. Use established argument annotation to measure observable textual structure.
+2. Find naturally paired written/spoken representations of the same political act.
+3. Measure the transformation without privileging normative content.
+4. Classify transformed material by type.
+5. Test whether particular kinds of information are systematically affected.
+6. Only then investigate enthymemes or normative compression as hypotheses.
 
-The analogy should not be treated as evidence for the phenomenon.
+A controlled corpus in which a known structured argument is rendered into prose would also be useful, but a naturally occurring written/spoken parallel corpus may provide a stronger initial test because both representations are produced by real actors rather than constructed by researchers.
 
 ## Open questions
 
-- Can "fully explicated argument" be defined with sufficient inter-annotator reliability?
-- Is normative compression distinguishable from ordinary rhetorical abbreviation?
-- Can information loss be measured without building the result into the annotation scheme?
-- Does the proposed measure predict anything independently interesting?
-- Is the signal-processing formalism explanatory, or merely metaphorical?
+- Can suitable matched written/spoken political episodes be assembled at scale?
+- How reliably can independently annotated argument graphs be aligned across modalities?
+- What transformation measures are justified without assuming a theory of "lost" information?
+- Are speech-added propositions systematic, and what kinds are they?
+- Does any apparent normative compression exceed ordinary cross-channel transformation?
+
+This note is a speculative research direction, not a validated method or established claim.
 
 ## Provenance
 
